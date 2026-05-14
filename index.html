@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Love Space ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+    }
+
+    .center-screen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    input {
+      padding: 15px;
+      border-radius: 30px;
+      border: none;
+      width: 250px;
+      margin-top: 15px;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 40px;
+      background: white;
+      color: #ff4d6d;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 15%;
+    }
+
+    h1 {
+      font-size: 4rem;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px white;
+      }
+
+      to {
+        text-shadow: 0 0 30px pink;
+      }
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Password Screen -->
+  <div id="loginScreen" class="center-screen">
+    <h1>Private Website 🔒</h1>
+
+    <p>Enter the secret password</p>
+
+    <input type="password" id="passwordInput" placeholder="Password">
+
+    <button onclick="checkPassword()">
+      Enter ❤️
+    </button>
+
+    <p id="errorMessage"></p>
+  </div>
+
+  <!-- Romantic Website -->
+  <div id="websiteContent" class="hidden">
+
+    <section class="hero">
+      <h1>Welcome My Love ❤️</h1>
+
+      <p>
+        This little corner of the internet belongs only to us ✨
+      </p>
+
+      <button onclick="showLoveMessage()">
+        Open Love Letter 💌
+      </button>
+
+      <div id="loveMessage" class="hidden message">
+        You are my favorite person in the world ❤️
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+
+    // CHANGE YOUR PASSWORD HERE
+    const secretPassword = "27326";
+
+    function checkPassword() {
+
+      const input =
+        document.getElementById("passwordInput").value;
+
+      if (input === secretPassword) {
+
+        document.getElementById("loginScreen").style.display =
+          "none";
+
+        document.getElementById("websiteContent")
+          .classList.remove("hidden");
+
+      } else {
+
+        document.getElementById("errorMessage").innerText =
+          "Wrong password 💔";
+      }
+    }
+
+    function showLoveMessage() {
+
+      document.getElementById("loveMessage")
+        .classList.toggle("hidden");
+    }
+
+  </script>
+
+</body>
+</html>
