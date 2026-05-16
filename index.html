@@ -10,7 +10,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
-      overflow: hidden;
+      overflow: auto;
       height: 100vh;
       color: white;
     }
@@ -77,6 +77,14 @@
     .message {
       margin-top: 10px;
       font-size: 1.3rem;
+      line-height: 2;
+      padding: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255,255,255,0.15);
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
     }
   </style>
 </head>
@@ -122,11 +130,11 @@
         through thick and thin. Everyday I fall more in love with you even if I don't tell you.😍 You are the type of person I always secretly hoped for.
       </div>
 
-      <button onclick="showThingsMessage()">
+      <button onclick="showthingsMessage()">
         Things I love about you💕
       </button>
 
-      <div id="ThingsMessage" class="hidden message">
+      <div id="thingsMessage" class="hidden message">
         1) Your smileee! It's my most favourite thing in the world
         2) Your eyelashes that I will cut and sell in the future 
         3) Ik I've told you this multiple times but I just love how to try to learn and try do new things for other people even if you know u won't be able to
@@ -148,11 +156,11 @@
         19) you mineeee😘❤️
       </div>
 
-      <button onclick="showPoemMessage()">
+      <button onclick="showpoemMessage()">
         Poem for my bubu😍
       </button>
 
-      <div id="PoemMessage" class="hidden message">
+      <div id="poemMessage" class="hidden message">
         What is life, if not with you
         a life like that is like watching a boring video on youtube
         Fun, ambitious, and cute 
@@ -189,7 +197,7 @@
 
         document.getElementById("errorMessage").innerText =
           "Wrong password 💔";
-  
+      }
     }
 
     function showLoveMessage() {
@@ -198,15 +206,15 @@
         .classList.toggle("hidden");
     }
       
-    function showThingsMessage() {
+    function showthingsMessage() {
 
-      document.getElementById("ThingsMessage")
+      document.getElementById("thingsMessage")
         .classList.toggle("hidden");
     }
 
-    function showPoemMessage() {
+    function showpoemMessage() {
 
-      document.getElementById("PoemMessage")
+      document.getElementById("poemMessage")
         .classList.toggle("hidden"); 
     }
 
